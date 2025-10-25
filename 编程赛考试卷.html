@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编程考试试卷分卷导航</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36BFFA',
+                        accent: '#36D399',
+                        neutral: '#F3F4F6',
+                        dark: '#1F2937'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .card-hover {
+                @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+            }
+            .link-effect {
+                @apply transition-all duration-200 hover:text-primary hover:underline;
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-50 text-dark">
+    <!-- 顶部导航 -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl md:text-3xl font-bold text-primary flex items-center">
+                <i class="fa fa-book mr-3"></i>
+                试卷分卷导航系统
+            </h1>
+            <div class="hidden md:block">
+                <span class="text-gray-500"><i class="fa fa-users mr-1"></i> 幻码星球黄龙校区教师专用</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- 页面介绍 -->
+        <div class="text-center mb-10">
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                本页面整合了编程各类考试试卷资源，点击相应试卷名称即可进入答题界面。
+                试卷按类别整理，如有补充请联系网页负责人。
+            </p>
+        </div>
+
+        <!-- 试卷分类卡片 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- CIE 图形化一级 -->
+            <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                        <i class="fa fa-paint-brush text-primary text-xl"></i>
+                    </div>
+                    <h2 class="text-xl font-semibold">cie 图形化一级</h2>
+                </div>
+                <ul class="space-y-3">
+                    <li><a href="https://ks.wjx.com/vm/Y8fVNIp.aspx#" target="_blank" class="link-effect">202506 试卷</a></li>
+                    <li><a href="https://ks.wjx.com/vm/QJUGnCJ.aspx#" target="_blank" class="link-effect">202409 试卷</a></li>
+                    <li><a href="https://ks.wjx.com/vm/PRqwSBc.aspx#" target="_blank" class="link-effect">202403 试卷</a></li>
+                    <li><a href="https://ks.wjx.com/vm/PW230Dc.aspx#" target="_blank" class="link-effect">202312 试卷</a></li>
+                    <li><a href="https://ks.wjx.com/vm/htltVON.aspx#" target="_blank" class="link-effect">202305 试卷</a></li>
+                    <li><a href="https://ks.wjx.com/vm/mBjrpIy.aspx#" target="_blank" class="link-effect">202212 试卷</a></li>
+                </ul>
+            </div>
+
+            <!-- CIE PY一级 -->
+            <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                        <i class="fa fa-code text-primary text-xl"></i>
+                    </div>
+                    <h2 class="text-xl font-semibold">cie py一级</h2>
+                </div>
+                <ul class="space-y-3">
+                    <li><a href="https://ks.wjx.com/vm/h4jONlv.aspx#" target="_blank" class="link-effect">202403 试卷</a></li>
+                    <li><a href="https://ks.wjx.com/vm/tUS1B4k.aspx#" target="_blank" class="link-effect">202305 试卷</a></li>
+                    <li><a href="https://ks.wjx.com/vm/YvVUHpf.aspx#" target="_blank" class="link-effect">202312 试卷</a></li>
+                </ul>
+            </div>
+
+            <!-- CIE PY2级 -->
+            <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                        <i class="fa fa-code-fork text-primary text-xl"></i>
+                    </div>
+                    <h2 class="text-xl font-semibold">cie py2级</h2>
+                </div>
+                <ul class="space-y-3">
+                    <li><a href="https://ks.wjx.com/vm/hMeONlN.aspx#" target="_blank" class="link-effect">202503 试卷</a></li>
+                    <li><a href="https://ks.wjx.com/vm/rNZL0V6.aspx#" target="_blank" class="link-effect">202412 试卷</a></li>
+                </ul>
+            </div>
+
+            <!-- GESP C++一级 -->
+            <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                        <i class="fa fa-cogs text-primary text-xl"></i>
+                    </div>
+                    <h2 class="text-xl font-semibold">GESP C++一级</h2>
+                </div>
+                <ul class="space-y-3">
+                    <li><a href="https://ks.wjx.com/vm/moc302B.aspx#" target="_blank" class="link-effect">202503 试卷</a></li>
+                    <li><a href="https://ks.wjx.com/vm/m730HC4.aspx#" target="_blank" class="link-effect">202412 试卷</a></li>
+                    <li><a href="https://ks.wjx.com/vm/Ol1G2bP.aspx#" target="_blank" class="link-effect">202409 试卷</a></li>
+                    <li><a href="https://ks.wjx.com/vm/hQCoyge.aspx#" target="_blank" class="link-effect">202406 试卷</a></li>
+                    <li><a href="https://ks.wjx.com/vm/raQdwBB.aspx#" target="_blank" class="link-effect">202403 试卷</a></li>
+                    <li><a href="https://ks.wjx.com/vm/rKqBIuU.aspx#" target="_blank" class="link-effect">202312 试卷</a></li>
+                    <li><a href="https://ks.wjx.com/vm/rTBO2o1.aspx#" target="_blank" class="link-effect">202309 试卷</a></li>
+                    <li><a href="https://ks.wjx.com/vm/moY3ARW.aspx#" target="_blank" class="link-effect">202306 试卷</a></li>
+                    <li><a href="https://ks.wjx.com/vm/QIIdwwR.aspx#" target="_blank" class="link-effect">202303 试卷</a></li>
+                </ul>
+            </div>
+
+            <!-- 信息素养大赛 -->
+            <div class="bg-white rounded-xl shadow-md p-6 card-hover md:col-span-2 lg:col-span-1">
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                        <i class="fa fa-trophy text-primary text-xl"></i>
+                    </div>
+                    <h2 class="text-xl font-semibold">信息素养大赛</h2>
+                </div>
+                <ul class="space-y-3">
+                    <li><a href="https://ks.wjx.com/vm/YvpfVm3.aspx#" target="_blank" class="link-effect">2024复赛浙江赛区真题</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-white border-t mt-12 py-6">
+        <div class="container mx-auto px-4 text-center text-gray-500">
+            <p>© 2025 试卷分卷导航系统 | 教师专用资源平台</p>
+            <p class="text-sm mt-2">点击试卷名称将跳转到对应答题界面</p>
+        </div>
+    </footer>
+
+    <!-- 简单的交互脚本 -->
+    <script>
+        // 页面加载动画
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card-hover');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+        });
+
+        // 初始化卡片样式
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(10px)';
+        });
+    </script>
+</body>
+</html>
